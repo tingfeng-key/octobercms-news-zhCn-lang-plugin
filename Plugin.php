@@ -31,16 +31,8 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
-    {
-    }
-
     protected $loaded = [];
+
     public function boot()
     {
         $this->translator = app()->get("translator");
@@ -66,59 +58,5 @@ class Plugin extends PluginBase
             }
             return false;
         });
-
-//        dd(app()->get("translator"));
-//        dd(app()->getLocale(), $this->app,$this->app['translator']);
-    }
-
-    /**
-     * Registers any front-end components implemented in this plugin.
-     *
-     * @return array
-     */
-    public function registerComponents()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'TingFeng\NewsZhCnLang\Components\MyComponent' => 'myComponent',
-        ];
-    }
-
-    /**
-     * Registers any back-end permissions used by this plugin.
-     *
-     * @return array
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'tingfeng.newszhcnlang.some_permission' => [
-                'tab' => 'NewsZhCnLang',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    /**
-     * Registers back-end navigation items for this plugin.
-     *
-     * @return array
-     */
-    public function registerNavigation()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'newszhcnlang' => [
-                'label'       => 'NewsZhCnLang',
-                'url'         => Backend::url('tingfeng/newszhcnlang/mycontroller'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['tingfeng.newszhcnlang.*'],
-                'order'       => 500,
-            ],
-        ];
     }
 }
