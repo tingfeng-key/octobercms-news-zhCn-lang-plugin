@@ -32,7 +32,6 @@ class Plugin extends PluginBase
     }
 
     protected $loaded = [];
-
     public function boot()
     {
         $this->translator = app()->get("translator");
