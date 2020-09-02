@@ -1,1 +1,4 @@
-1.0.1: First version of NewsZhCnLang
+1.0.1: 发布第一个版本
+1.0.2:
+    - 修复多个监听器存在时出现的bug
+    - 优化代码
