@@ -29,6 +29,7 @@ class Plugin extends PluginBase
     }
 
     /**
+     * 国际化类
      * @var Translator
      */
     protected $translator;
