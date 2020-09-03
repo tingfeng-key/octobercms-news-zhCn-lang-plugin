@@ -22,7 +22,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'NewsZhCnLang',
-            'description' => 'Indikator.News 插件的中文语言包',
+            'description' => 'Chinese language pack for Indikator.News plug-ins',
             'author'      => 'TingFeng',
             'icon'        => 'icon-leaf'
         ];
